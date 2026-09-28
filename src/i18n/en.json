@@ -1,0 +1,21 @@
+{
+  "brand": "Michel Blaas",
+  "studio": "Studio",
+  "nav": {
+    "work": "Work",
+    "journal": "Journal",
+    "travel": "Travel",
+    "about": "About",
+    "shop": "Shop",
+    "contact": "Contact"
+  },
+  "home": {
+    "kicker": "PRODUCT DESIGN · SMALL BATCH · NL",
+    "title": "Useful things, made better.",
+    "subline": "The site is being rebuilt. Full pages are on the way.",
+    "cta": "Coming soon"
+  },
+  "footer": {
+    "tagline": "Made to be used, and loved for years."
+  }
+}

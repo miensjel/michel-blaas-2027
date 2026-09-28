@@ -1,0 +1,45 @@
+---
+import Layout from "../layouts/Layout.astro";
+import en from "../i18n/en.json";
+---
+
+<Layout title={`${en.brand} — ${en.home.title}`} lang="en">
+  <section class="hero">
+    <p class="mono kicker">{en.home.kicker}</p>
+    <h1>{en.home.title}</h1>
+    <p class="subline">{en.home.subline}</p>
+    <span class="mono badge">{en.home.cta}</span>
+  </section>
+</Layout>
+
+<style>
+  .hero {
+    max-width: var(--content-max);
+    margin: 0 auto;
+    padding: 120px var(--side-margin) 96px;
+  }
+
+  .kicker {
+    color: var(--moss-ink);
+  }
+
+  h1 {
+    margin-top: 16px;
+    font-size: clamp(48px, 8vw, 92px);
+  }
+
+  .subline {
+    margin-top: 24px;
+    max-width: 640px;
+    color: var(--body-2);
+    font-size: 19px;
+  }
+
+  .badge {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 8px 12px;
+    border: 1px solid var(--hairline-strong);
+    color: var(--moss-ink);
+  }
+</style>

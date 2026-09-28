@@ -1,0 +1,99 @@
+:root {
+  /* Colour */
+  --paper: #f2f0ea;
+  --linen: #e6e1d5;
+  --linen-alt: #ece8de;
+  --navy: #1e2a38;
+  --moss: #5a6b45;
+  --moss-ink: #46553a;
+  --moss-light: #6b7d54;
+  --stone: #8a8f8c;
+  --meta-ink: #5c6670;
+  --body-2: #3a4552;
+  --hairline: rgba(30, 42, 56, 0.16);
+  --hairline-strong: rgba(30, 42, 56, 0.4);
+  --error-ink: #8a4a3a;
+
+  /* On navy */
+  --on-navy-text: #f2f0ea;
+  --on-navy-secondary: #cfd5dc;
+  --on-navy-meta: #9aa6b4;
+  --on-navy-kicker: #b7c49f;
+  --on-navy-divider: rgba(242, 240, 234, 0.2);
+
+  /* Type */
+  --font-heading: "Barlow Condensed", sans-serif;
+  --font-body: "Barlow", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* Layout */
+  --content-max: 1280px;
+  --side-margin: 64px;
+  --gutter: 24px;
+  --header-height: 72px;
+
+  --radius: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--navy);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 0.95;
+  margin: 0;
+  text-wrap: balance;
+}
+
+p {
+  margin: 0;
+  text-wrap: pretty;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 11px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--moss);
+  outline-offset: 2px;
+}
+
+@media (max-width: 720px) {
+  :root {
+    --side-margin: 20px;
+    --header-height: 56px;
+  }
+}

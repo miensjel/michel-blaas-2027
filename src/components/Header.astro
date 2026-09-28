@@ -1,0 +1,102 @@
+---
+import en from "../i18n/en.json";
+import nl from "../i18n/nl.json";
+
+const { lang } = Astro.props as { lang: "en" | "nl" };
+const t = lang === "nl" ? nl : en;
+const altPath = lang === "nl" ? "/" : "/nl/";
+---
+
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href={lang === "nl" ? "/nl/" : "/"}>
+      {t.brand}
+      <span class="mono studio">{t.studio}</span>
+    </a>
+
+    <nav class="nav">
+      <span class="mono">{t.nav.work}</span>
+      <span class="mono">{t.nav.journal}</span>
+      <span class="mono">{t.nav.travel}</span>
+      <span class="mono">{t.nav.about}</span>
+      <span class="mono">{t.nav.shop}</span>
+      <span class="mono">{t.nav.contact}</span>
+    </nav>
+
+    <div class="lang-toggle">
+      <a class="mono lang-btn" class:list={[{ active: lang === "en" }]} href="/">EN</a>
+      <a class="mono lang-btn" class:list={[{ active: lang === "nl" }]} href="/nl/">NL</a>
+    </div>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    height: var(--header-height);
+    border-bottom: 1px solid var(--hairline);
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background: var(--paper);
+    z-index: 10;
+  }
+
+  .inner {
+    width: 100%;
+    max-width: var(--content-max);
+    margin: 0 auto;
+    padding: 0 var(--side-margin);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--gutter);
+  }
+
+  .brand {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--navy);
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+
+  .studio {
+    color: var(--stone);
+    font-size: 10px;
+  }
+
+  .nav {
+    display: flex;
+    gap: 24px;
+  }
+
+  .nav .mono {
+    color: var(--navy);
+  }
+
+  .lang-toggle {
+    display: flex;
+    border: 1px solid var(--hairline-strong);
+  }
+
+  .lang-btn {
+    padding: 6px 10px;
+    text-decoration: none;
+    color: var(--navy);
+  }
+
+  .lang-btn.active {
+    background: var(--navy);
+    color: var(--paper);
+  }
+
+  @media (max-width: 900px) {
+    .nav {
+      display: none;
+    }
+  }
+</style>

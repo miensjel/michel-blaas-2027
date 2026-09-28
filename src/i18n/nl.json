@@ -1,0 +1,21 @@
+{
+  "brand": "Michel Blaas",
+  "studio": "Studio",
+  "nav": {
+    "work": "Werk",
+    "journal": "Journaal",
+    "travel": "Reizen",
+    "about": "Over",
+    "shop": "Shop",
+    "contact": "Contact"
+  },
+  "home": {
+    "kicker": "PRODUCTONTWERP · KLEINE SERIES · NL",
+    "title": "Nuttige dingen, beter gemaakt.",
+    "subline": "De site wordt opnieuw gebouwd. De volledige pagina's volgen binnenkort.",
+    "cta": "Binnenkort"
+  },
+  "footer": {
+    "tagline": "Gemaakt om te gebruiken, en jaren van te houden."
+  }
+}
